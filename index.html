@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GDG · Control Físico con Teachable Machine</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><div class="hd">
+  <div class="logo"><i></i><i></i><i></i><i></i></div>
+  <div><h1>Control Físico con Visión por Computadora y Teachable Machine</h1>
+  <div class="sub">Google Developer Groups · Taller de 30 minutos · IA Web + Arduino</div></div>
+</div></header>
+
+<main>
+  <section class="card">
+    <h2><span class="num" style="background:var(--b)">1</span>Modelo de Teachable Machine</h2>
+    <input id="url" type="text" placeholder="https://teachablemachine.withgoogle.com/models/XXXXXXX/">
+    <div class="row"><button id="bLoad" class="bb">Cargar modelo y cámara</button><button id="bStop" class="br" disabled>Detener</button></div>
+    <div id="msg" class="msg">Pega la URL del modelo exportado (Image Project).</div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num" style="background:var(--r)">2</span>Conexión con Arduino</h2>
+    <div class="row" style="margin-top:0"><span class="pill"><span id="sd" class="dot"></span><span id="st">Desconectado</span></span></div>
+    <div class="row"><button id="bConn" class="bg">Conectar Arduino</button><button id="bDisc" class="br" disabled>Desconectar</button></div>
+    <div class="msg">Requiere Chrome/Edge y HTTPS o localhost · 9600 baudios.</div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num" style="background:var(--y);color:#202124">3</span>Cámara web</h2>
+    <div id="cam">La cámara aparecerá aquí</div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num" style="background:var(--g)">4</span>Mapeo clase → comando</h2>
+    <div id="maps" class="msg">Carga un modelo para configurar los comandos.</div>
+    <div class="lbl" style="margin-top:14px">Umbral de confianza: <b id="thv">85%</b></div>
+    <input id="th" type="range" min="50" max="99" value="85" style="width:100%">
+  </section>
+
+  <section class="card full">
+    <h2><span class="num" style="background:var(--b)">5</span>Panel de estado en tiempo real</h2>
+    <div class="stat">
+      <div class="box"><div class="lbl">Clase detectada</div><div id="sc" class="big">—</div></div>
+      <div class="box"><div class="lbl">Confianza</div><div id="sp" class="big">0%</div><div class="bar"><div id="spb"></div></div></div>
+      <div class="box"><div class="lbl">Comando enviado</div><div id="sm" class="big cmd">—</div></div>
+    </div>
+    <div id="preds" style="margin-top:16px"></div>
+    <div id="log"></div>
+  </section>
+</main>
+
+<footer id="ft"><div class="ground"></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
