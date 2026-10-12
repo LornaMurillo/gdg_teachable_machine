@@ -17,6 +17,8 @@ import type { Prediction } from "./types";
 let mapping: string[] = [];
 // Guarda la confianza mínima necesaria para aceptar una predicción: 0.85 equivale a 85%.
 let threshold = 0.85;
+// Guarda el último comando
+let lastCmd = "";
 
 // Se ejecuta cuando se pide cargar el modelo y la cámara.
 async function onLoad(): Promise<void> {
@@ -60,6 +62,13 @@ async function onFrame(preds: Prediction[]): Promise<void> {
   const cmd = top.probability >= threshold ? mapping[preds.indexOf(top)] ?? "0" : "0";
   // Actualiza la clase, los porcentajes y la orden que muestra la página.
   updatePanel(preds, top, cmd, threshold);
+
+  // Solo envía el comando si es DIFERENTE al último enviado
+  if (cmd !== lastCmd) {
+    lastCmd = cmd;
+    await sendCommand(cmd);
+  }
+
   // Envía la orden a Arduino; await espera a que termine el intento de envío.
   await sendCommand(cmd);
 }
