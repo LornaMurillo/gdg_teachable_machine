@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">IA web conectada a Arduino</title>
+  <desc id="desc">Una cámara envía imágenes a un modelo de aprendizaje automático que controla Arduino.</desc>
+  <defs>
+    <linearGradient id="bg" x1="45" y1="16" x2="919" y2="289" gradientUnits="userSpaceOnUse"><stop stop-color="#F8FAFF"/><stop offset="1" stop-color="#FFF9EE"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB" filterUnits="objectBoundingBox"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#202124" flood-opacity=".09"/></filter>
+  </defs>
+  <rect x="1" y="1" width="958" height="298" rx="28" fill="url(#bg)" stroke="#E8EAED" stroke-width="2"/>
+  <path d="M28 2h226" stroke="#4285F4" stroke-width="5"/><path d="M254 2h226" stroke="#EA4335" stroke-width="5"/><path d="M480 2h226" stroke="#FBBC04" stroke-width="5"/><path d="M706 2h226" stroke="#34A853" stroke-width="5"/>
+  <g filter="url(#shadow)">
+    <rect x="48" y="65" width="196" height="151" rx="20" fill="white" stroke="#E8EAED"/>
+    <rect x="75" y="94" width="142" height="86" rx="13" fill="#EAF1FE"/>
+    <path d="M96 154l28-30 21 21 17-16 34 35H96v-10Z" fill="#AECBFA"/>
+    <circle cx="178" cy="116" r="10" fill="#FBBC04"/>
+    <rect x="119" y="83" width="54" height="9" rx="4.5" fill="#DADCE0"/>
+    <circle cx="105" cy="197" r="4" fill="#34A853"/><path d="M114 197h45" stroke="#DADCE0" stroke-width="4" stroke-linecap="round"/>
+    <rect x="382" y="65" width="196" height="151" rx="20" fill="white" stroke="#E8EAED"/>
+    <circle cx="480" cy="135" r="43" fill="#F1F3F4"/>
+    <circle cx="480" cy="135" r="28" stroke="#4285F4" stroke-width="5" stroke-dasharray="9 7"/>
+    <circle cx="480" cy="135" r="10" fill="#34A853"/>
+    <path d="M480 91v12m0 64v12m44-44h-12m-64 0h-12m75.1-31.1-8.5 8.5m-45.2 45.2-8.5 8.5m62.2 0-8.5-8.5m-45.2-45.2-8.5-8.5" stroke="#EA4335" stroke-width="4" stroke-linecap="round"/>
+    <rect x="716" y="65" width="196" height="151" rx="20" fill="white" stroke="#E8EAED"/>
+    <rect x="757" y="101" width="114" height="71" rx="9" fill="#E8F0FE" stroke="#4285F4" stroke-width="3"/>
+    <path d="M773 119h30v13h-30zm0 23h16v13h-16z" fill="#4285F4"/><circle cx="840" cy="121" r="7" fill="#34A853"/><circle cx="840" cy="145" r="7" fill="#FBBC04"/>
+    <path d="M773 172v13m82-13v13m-82 0h82" stroke="#5F6368" stroke-width="4" stroke-linecap="round"/>
+    <path d="M814 184v14m0 0-13 9m13-9 13 9" stroke="#EA4335" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M264 139h91m-8-8 8 8-8 8m197-8h91m-8-8 8 8-8 8" stroke="#9AA0A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="305" cy="139" r="5" fill="#4285F4"/><circle cx="333" cy="139" r="5" fill="#EA4335"/><circle cx="614" cy="139" r="5" fill="#FBBC04"/><circle cx="642" cy="139" r="5" fill="#34A853"/>
+  <text x="146" y="247" fill="#202124" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">CÁMARA WEB</text>
+  <text x="480" y="247" fill="#202124" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">TEACHABLE MACHINE</text>
+  <text x="814" y="247" fill="#202124" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">ARDUINO</text>
+</svg>

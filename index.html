@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GDG · Control Físico con Teachable Machine</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg" href="./src/img/gdg_favicon.svg">
 </head>
 <body>
 <header><div class="hd">
   <div class="logo"><i></i><i></i><i></i><i></i></div>
   <div><h1>Control Físico con Visión por Computadora y Teachable Machine</h1>
-  <div class="sub">Google Developer Groups · Taller de 30 minutos · IA Web + Arduino</div></div>
+  <div class="sub">Google Developer Groups · Pacífico · IA Web + Arduino</div></div>
 </div></header>
 
 <main>
@@ -33,7 +34,7 @@
     <div id="cam">La cámara aparecerá aquí</div>
   </section>
 
-  <section class="card">
+  <section class="card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto; width: 100%;">
     <h2><span class="num" style="background:var(--g)">4</span>Mapeo clase → comando</h2>
     <div id="maps" class="msg">Carga un modelo para configurar los comandos.</div>
     <div class="lbl" style="margin-top:14px">Umbral de confianza: <b id="thv">85%</b></div>
@@ -54,8 +55,13 @@
 
 <footer id="ft"><div class="ground"></div></footer>
 
+<!-- Carga la librería principal de Google para hacer machine learning directamente en el navegador web. Es el motor matemático que permite procesar las imágenes de la cámara en tiempo real. -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+
+<!-- Carga la librería específica de la herramienta Teachable Machine. Le da a la página la capacidad de entender y utilizar el modelo de reconocimiento de imágenes que se entrenó -->
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+<!-- Carga el código en TypeScript (el que se programó con Vite). Este es el "cerebro" que une todo: arranca la cámara, le pide a las librerías anteriores que analicen el video, y decide cuándo enviar las órdenes ('1', '3', etc.) a través del puerto serial hacia el Arduino. -->
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
