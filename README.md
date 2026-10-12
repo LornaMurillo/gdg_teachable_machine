@@ -14,8 +14,6 @@ Una demo educativa para explorar **IA en el navegador**, modelos de [Teachable M
   <img alt="Arduino" src="https://img.shields.io/badge/Arduino-hardware-00A0D6?style=for-the-badge&logo=arduino&logoColor=white" />
 </p>
 
-[Empezar](#-puesta-en-marcha) · [Cableado](#-conexiones) · [Cómo funciona](#-cómo-funciona) · [Comandos](#-comandos-seriales)
-
 </div>
 
 ---
@@ -101,7 +99,7 @@ La app evita reenviar un comando mientras no cambie. Puedes combinar sonidos y m
 
 ## Hecho para aprender en comunidad
 
-Este proyecto es una actividad práctica para descubrir cómo una idea de IA puede cruzar la pantalla y convertirse en una interacción física. Explóralo, cambia las clases y comparte lo que construyas con tu comunidad **Google Developer Groups**.
+Este proyecto es una actividad práctica para descubrir cómo una idea de IA puede cruzar la pantalla y convertirse en una interacción física. Explóralo, cambia las clases y comparte lo que construyas la comunidad **Google Developer Groups**.
 
 <div align="center">
   <sub>GDG Pacífico</sub>
