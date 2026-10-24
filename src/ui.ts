@@ -32,7 +32,8 @@ export function renderMaps(labels: string[], mapping: string[]): void {
       ["0", "'0' · Reposo"],
       ["3", "'3' · Servo Izquierda (0°)"],
       ["4", "'4' · Servo Derecha (180°)"],
-      ["5", "'5' · Servo Frente (90°)"]
+      ["5", "'5' · Servo Frente (90°)"],
+      ["6", "'6' · Servo Atrás (45°)"]
     // Agrega cada orden de la lista como una opción del menú.
     ].forEach(([v, t]) => {
       // Crea una opción individual del menú.
